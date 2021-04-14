@@ -1,0 +1,109 @@
+.wrapper {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper__battery {
+        width:600px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media  (max-width: $sc) {
+            width:300px;
+            height: 100px;
+        }
+        .battery__bars {
+            background-color: white;
+            border:black 5px solid;
+            width: 90%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .bar1,
+            .bar2,
+            .bar3,
+            .bar4 {
+                background-color: green;
+                height: 90%;
+                width: 22%;
+                margin-left: 8px;
+                margin-right: 8px;
+                }
+
+             .bar1 {
+                 animation-name: bar1;
+                 animation-duration: 5s;
+                 animation-iteration-count: infinite;
+                 animation: bar1 3s steps(1) infinite;
+             }   
+             .bar2 {
+                animation-name: bar2;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation: bar2 3s steps(1) infinite;
+            }   
+            .bar3 {
+                animation-name: bar3;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation: bar3 3s steps(1) infinite;
+            }   
+            .bar4 {
+                animation-name: bar4;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation: bar4 3s steps(1) infinite;
+            }   
+
+        }
+
+        .wrapper__side {
+            width: 30px;
+            height: 100px;
+            background-color: black;
+            float: right;
+
+            @media  (max-width: $sc) {
+                width:15px;
+                height: 50px;
+            }
+        }
+
+    }
+}
+
+
+@keyframes bar1 {
+    25%  {background-color:red; }
+    50%  {background-color:orange; }
+    75%  {background-color:yellow; }
+    100% {background-color:green; }
+  }
+
+  @keyframes bar2 {
+    25%  {background-color:white; }
+    50%  {background-color:orange; }
+    75%  {background-color:yellow; }
+    100% {background-color:green; }
+  }
+
+  @keyframes bar3 {
+    25%  {background-color:white; }
+    50%  {background-color:white; }
+    75%  {background-color:yellow; }
+    100% {background-color:green; }
+  }
+
+  @keyframes bar4 {
+    25%  {background-color:white; }
+    50%  {background-color:white; }
+    75%  {background-color:white; }
+    100% {background-color:green; }
+  }

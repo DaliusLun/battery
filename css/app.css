@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .wrapper__battery {
+  width: 600px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .wrapper .wrapper__battery {
+    width: 300px;
+    height: 100px;
+  }
+}
+
+.wrapper .wrapper__battery .battery__bars {
+  background-color: white;
+  border: black 5px solid;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .wrapper__battery .battery__bars .bar1,
+.wrapper .wrapper__battery .battery__bars .bar2,
+.wrapper .wrapper__battery .battery__bars .bar3,
+.wrapper .wrapper__battery .battery__bars .bar4 {
+  background-color: green;
+  height: 90%;
+  width: 22%;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.wrapper .wrapper__battery .battery__bars .bar1 {
+  animation-name: bar1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation: bar1 3s steps(1) infinite;
+}
+
+.wrapper .wrapper__battery .battery__bars .bar2 {
+  animation-name: bar2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation: bar2 3s steps(1) infinite;
+}
+
+.wrapper .wrapper__battery .battery__bars .bar3 {
+  animation-name: bar3;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation: bar3 3s steps(1) infinite;
+}
+
+.wrapper .wrapper__battery .battery__bars .bar4 {
+  animation-name: bar4;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation: bar4 3s steps(1) infinite;
+}
+
+.wrapper .wrapper__battery .wrapper__side {
+  width: 30px;
+  height: 100px;
+  background-color: black;
+  float: right;
+}
+
+@media (max-width: 600px) {
+  .wrapper .wrapper__battery .wrapper__side {
+    width: 15px;
+    height: 50px;
+  }
+}
+
+@keyframes bar1 {
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+@keyframes bar2 {
+  25% {
+    background-color: white;
+  }
+  50% {
+    background-color: orange;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+@keyframes bar3 {
+  25% {
+    background-color: white;
+  }
+  50% {
+    background-color: white;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+@keyframes bar4 {
+  25% {
+    background-color: white;
+  }
+  50% {
+    background-color: white;
+  }
+  75% {
+    background-color: white;
+  }
+  100% {
+    background-color: green;
+  }
+}
